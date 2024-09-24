@@ -4,18 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victoria's portfolio</title>
+    <title>HTML & CSS practice </title>
+    <link rel="stylesheet" href="style.css">
     <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <style>
-        .container{
-            width: 40vw;
-            padding: 3rem;
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            padding: 30px;
             overflow-y: hidden;
             overflow-x: hidden;
             position: relative;
-            border-radius: 3rem;
-            background:pink;
+            border-radius: 30px;
+            border: rgba(98, 93, 93, 0.164) 3px solid;
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.579);
+            font-family: Arial, sans-serif;
+            z-index: 1; /* Keep content on top */
         }
+        
+        /* Create a separate background using ::before */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1693165075126-1ade93d55604?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzOTM2NjYzOXx8ZW58MHx8fHx8');
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px; /* Ensure the background is also rounded */
+            z-index: -1; /* Ensure it stays behind the content */
+            transition: filter 0.3s ease; /* Smooth transition on hover */
+        }
+        
+        /* Apply blur effect on hover */
+        .container:hover::before {
+            filter: blur(5px); /* Adjust the blur intensity as needed */
+        }
+
+
         h1 {
             top: 0;
             margin: 0;
@@ -27,9 +67,14 @@
             color: white;
             margin-bottom: 3rem;
             box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
-            background-image: -webkit-radial-gradient(rgb(236, 109, 109), gray);
+            background-image: -webkit-radial-gradient(rgba(26, 204, 224, 0.268), rgba(245, 30, 209, 0.97));
         }
-        ol {
+
+        h1:hover {
+            background-image: -webkit-radial-gradient(rgb(12, 87, 251), rgba(214, 7, 155, 0.373));
+        }
+
+        ul {
             margin: 0;
             gap: 1rem;
             padding: 0;
@@ -39,32 +84,49 @@
             flex-direction: column;
             counter-reset: my-counter;
         }
-            li {
-                width: 40rem;
-                text-align: center;
-                color: white;
-                border-radius: 10px;
-                background: gray;
-                counter-increment: my-counter;
-                padding: 1.1rem 1.5rem 1.1rem 1.5rem;
-                &::before {
-                    content: counter(my-counter) ". ";
-                }}
+
+        li {
+            width: 120px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            background: rgba(241, 208, 208, 0.51);
+            box-shadow: 0 7px 8px rgba(0, 0, 0, 0.532);
+            counter-increment: my-counter;
+            padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+        }
+
+        li:hover {
+            background: rgb(214, 7, 156);
+            font-size: large;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+                /* Adjust padding for smaller screens */
+                border-radius: 1.5rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <header>Victoria</header>
+    <div class = "test">
+        <h2 id="heading" ">Challenge</h2>
+        <h3>Here is test page</h3>
+    </div>
     <div class="container">
-        <h1>The Order of Operations</h1>
-        <ol>
-            <li>Parentheses</li>
-            <li>Exponents</li>
-            <li>Multiplication</li>
-            <li>Division</li>
-            <li>Addition</li>
-            <li>Subtraction</li>
-        </ol>
+        <h1>Welcome to My Links Page</h1>
+        <ul>
+            <li>Page 1</li>
+            <li>Page 2</li>
+            <li>Page 3</li>
+            <li>Page 4</li>
+            <li>Page 5</li>
+            <li>Page 6</li>
+        </ul>
     </div>
 </body>
 

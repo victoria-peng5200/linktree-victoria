@@ -1,0 +1,50 @@
+.test{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    padding: 30px;
+    font-size: 20px;
+    text-align: left;
+    position: relative; /* Required for the pseudo-element to position correctly */
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.579);
+    z-index: 1; /* Ensures the content stays on top */
+}
+.test::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1518076404115-d3cfab84eeb7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    z-index: -1; /* Ensure it is behind the content */
+    transition: filter 0.3s ease;
+}
+
+.test:hover::before {
+    filter: blur(5px); /* Apply the blur effect on hover */
+}
+
+.test:hover{
+    color: white;
+}
+
+#heading{
+    color: rgb(167, 226, 72)
+}
+
+.test h3 {
+    font-family: 'Ubuntu Mono', monospace; /* Use Ubuntu Mono */
+    
+}
+.test h2 {
+    font-family: Arial, sans-serif; /* Arial */
+}
