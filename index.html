@@ -5,20 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victoria's portfolio</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <style>
+        .container{
+            width: 40vw;
+            padding: 3rem;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            position: relative;
+            border-radius: 3rem;
+            background:pink;
+        }
+        h1 {
+            top: 0;
+            margin: 0;
+            padding: 6rem 0;
+            padding-top: 7rem;
+            position: sticky;
+            border-radius: 3rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
+            background-image: -webkit-radial-gradient(rgb(236, 109, 109), gray);
+        }
+        ol {
+            margin: 0;
+            gap: 1rem;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            place-items: center;
+            flex-direction: column;
+            counter-reset: my-counter;
+        }
+            li {
+                width: 40rem;
+                text-align: center;
+                color: white;
+                border-radius: 10px;
+                background: gray;
+                counter-increment: my-counter;
+                padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+                &::before {
+                    content: counter(my-counter) ". ";
+                }}
+    </style>
 </head>
 
 <body>
     <header>Victoria</header>
-    <nav>
+    <div class="container">
+        <h1>The Order of Operations</h1>
         <ol>
-            <li><a href="https://github.com/victoria-peng5200/linktree-victoria/settings">Click Me</a></li>
-            <li>b</li>
-            <li>c</li>  
-            <li>d</li>  
-            <li>e</li>  
-        </ol>   
-
-    </nav>
+            <li>Parentheses</li>
+            <li>Exponents</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+            <li>Addition</li>
+            <li>Subtraction</li>
+        </ol>
+    </div>
 </body>
 
 </html>
