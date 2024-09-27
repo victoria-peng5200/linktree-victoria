@@ -1,9 +1,30 @@
 /* Make the parent container take up the full viewport */
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: "Open Sans", sans-serif;
+   width: 100%;  /* Full width */
+   height: 100vh; /* Full viewport height */
+   display: flex;
+   justify-content: center; /* Horizontally center content */
+   align-items: center; /* Vertically center content */
+   background-image: url("https://images.unsplash.com/photo-1693165075126-1ade93d55604?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzOTM2NjYzOXx8ZW58MHx8fHx8");
+  background-size: cover;
+}
+
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center; 
+    border: 15px #ff0000;
  }
+ .form-container:hover {
+   box-shadow: 0 4px 10px rgba(255, 0, 0, 0.1); /* Subtle shadow */
+}
  
  .minimal-form {
     font-weight: bold;

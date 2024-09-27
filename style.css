@@ -1,7 +1,10 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
 body {
    margin: 0;
    padding: 0;
-   font-family: Arial, sans-serif;
+   font-family: "Open Sans", sans-serif;
    width: 100%;  /* Full width */
    height: 100vh; /* Full viewport height */
    display: flex;
@@ -291,10 +294,10 @@ a:hover {
     padding: 0.4rem;
   }
 
-  .todo {
+  /* .todo {
     width: 100%;
     font-size: 0.9rem;
-  }
+  } */
 
   select {
     width: 100%;
@@ -341,10 +344,10 @@ a:hover {
     padding: 0.3rem;
   }
 
-  .todo {
+  /* .todo {
     width: 90%;
     font-size: 0.8rem;
-  }
+  } */
 
   select {
     width: 100%;
