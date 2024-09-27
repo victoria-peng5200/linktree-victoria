@@ -4,130 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & CSS practice </title>
+    <title>Linktree practice </title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            width: 300px;
-            padding: 30px;
-            overflow-y: hidden;
-            overflow-x: hidden;
-            position: relative;
-            border-radius: 30px;
-            border: rgba(98, 93, 93, 0.164) 3px solid;
-            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.579);
-            font-family: Arial, sans-serif;
-            z-index: 1; /* Keep content on top */
-        }
-        
-        /* Create a separate background using ::before */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1693165075126-1ade93d55604?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzOTM2NjYzOXx8ZW58MHx8fHx8');
-            background-size: cover;
-            background-position: center;
-            border-radius: 30px; /* Ensure the background is also rounded */
-            z-index: -1; /* Ensure it stays behind the content */
-            transition: filter 0.3s ease; /* Smooth transition on hover */
-        }
-        
-        /* Apply blur effect on hover */
-        .container:hover::before {
-            filter: blur(5px); /* Adjust the blur intensity as needed */
-        }
-
-
-        h1 {
-            top: 0;
-            margin: 0;
-            padding: 6rem 0;
-            padding-top: 7rem;
-            position: sticky;
-            border-radius: 3rem;
-            text-align: center;
-            color: white;
-            margin-bottom: 3rem;
-            box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
-            background-image: -webkit-radial-gradient(rgba(26, 204, 224, 0.268), rgba(245, 30, 209, 0.97));
-        }
-
-        h1:hover {
-            background-image: -webkit-radial-gradient(rgb(12, 87, 251), rgba(214, 7, 155, 0.373));
-        }
-
-        ul {
-            margin: 0;
-            gap: 1rem;
-            padding: 0;
-            display: flex;
-            list-style: none;
-            place-items: center;
-            flex-direction: column;
-            counter-reset: my-counter;
-        }
-
-        li {
-            width: 120px;
-            text-align: center;
-            color: white;
-            border-radius: 10px;
-            background: rgba(241, 208, 208, 0.51);
-            box-shadow: 0 7px 8px rgba(0, 0, 0, 0.532);
-            counter-increment: my-counter;
-            padding: 1.1rem 1.5rem 1.1rem 1.5rem;
-        }
-
-        li:hover {
-            background: rgb(214, 7, 156);
-            font-size: large;
-            font-weight: bold;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 1.5rem;
-                /* Adjust padding for smaller screens */
-                border-radius: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
 
 <body>
-    <div class = "test">
-        <h2 id="heading" ">Challenge</h2>
-        <h3>Here is test page</h3>
-    </div>
     <div class="container">
+        <div class="visual">
+            <!-- Ripple -->
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <circle id="circle-clip" cx="50%" cy="50%" r="25%" />
+                <clipPath id="avatar-clip">
+                  <use href="#circle-clip" />
+                </clipPath>
+              </defs>
+        
+              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                <animate attributeName="r" values="25%;50%" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="fill-opacity" values="1;0" dur="4s" repeatCount="indefinite" />
+              </circle>
+        
+              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                <animate attributeName="r" values="25%;50%" dur="4s" begin="1s" repeatCount="indefinite" />
+                <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="1s" repeatCount="indefinite" />
+              </circle>
+        
+              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                <animate attributeName="r" values="25%;50%" dur="4s" begin="2s" repeatCount="indefinite" />
+                <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="2s" repeatCount="indefinite" />
+              </circle>
+        
+              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                <animate attributeName="r" values="25%;50%" dur="4s" begin="3s" repeatCount="indefinite" />
+                <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="3s" repeatCount="indefinite" />
+              </circle>
+        
+              <image height="60%" width="60%" x="20%" y="25%" href="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" clip-path="url(#avatar-clip)" />  
+            </svg>
+          </div>
         <h1>Welcome to My Links Page</h1>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/victoria-peng-software-dev/">Linkedin</a></li>
-            <li>Page 2</li>
-            <li>Page 3</li>
-            <li>Page 4</li>
-            <li>Page 5</li>
-            <li>Page 6</li>
+
+        <ul >
+            <li class="linktree"><i class="fa-brands fa-github"></i><a href="https://www.linkedin.com/in/victoria-peng-software-dev/">Linkedin</a></li>
+            <li class="linktree"><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/">Facebook</a></li>
+            <li class="linktree"><i class="fa-brands fa-twitter"></i><a href="https://x.com/">Twiter</a></li>
+            <li class="linktree"><i class="fa-brands fa-instagram"></i><a href="./table.html">Tables</a></li>
+            <li class="linktree"><i class="fa-solid fa-phone"></i><a href="./contact.html">Contact</a></li>
+
         </ul>
+        <form action="">
+            <input type="text" class="todo-input">
+            <button class="+" type="submit">
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
+            <div class="select">
+                <select name="todos" id="" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="started">Started</option>
+                </select>   
+            </div>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list"></ul>
+        </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

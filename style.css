@@ -1,50 +1,365 @@
-.test{
+body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   width: 100%;  /* Full width */
+   height: 100vh; /* Full viewport height */
+   display: flex;
+   justify-content: center; /* Horizontally center content */
+   align-items: center; /* Vertically center content */
+   background-color: #f4f4f4; /* Optional background color */
+}
+
+.container {
+  width: 800px;
+  padding: 30px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 30px;
+  border: rgba(98, 93, 93, 0.164) 3px solid;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.579);
+  font-family: Arial, sans-serif;
+  z-index: 1; /* Keep content on top */
+}
+
+/* Create a separate background using ::before */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1693165075126-1ade93d55604?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzOTM2NjYzOXx8ZW58MHx8fHx8");
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px; /* Ensure the background is also rounded */
+  z-index: -1; /* Ensure it stays behind the content */
+  transition: filter 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Apply blur effect on hover */
+.container:hover::before {
+  filter: blur(5px); /* Adjust the blur intensity as needed */
+}
+
+image{
+  filter: brightness(1.5);
+}
+h1 {
+  top: 0;
+  margin: 0;
+  padding: 6rem 0;
+  padding-top: 7rem;
+  position: sticky;
+  border-radius: 3rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-radial-gradient(
+    rgba(26, 204, 224, 0.268),
+    rgba(245, 30, 209, 0.97)
+  );
+}
+
+h1:hover {
+  background-image: -webkit-radial-gradient(
+    rgb(12, 87, 251),
+    rgba(214, 7, 155, 0.373)
+  );
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  counter-reset: my-counter;
+  list-style-type: none;
+}
+
+.linktree {
+  width: 320px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background: rgba(241, 208, 208, 0.51);
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.532);
+  counter-increment: my-counter;
+  margin: 5px;
+  padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+}
+
+ul li:hover {
+  background-color: #faaca8;
+  color: black;
+  background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+  font-size: large;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 2rem;
+}
+
+form button {
+  cursor: pointer;
+  color: violet;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+form button:hover {
+  background-color: violet;
+  color: white;
+}
+
+.fa-circle-plus {
+  margin-top: 0.3rem;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.1s;
+  border-radius: 2rem;
+  width: 200px;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.complete-btn {
+  background-color: rgba(240, 0, 248, 0.973);
+}
+
+.trash-btn {
+  border-top-right-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  background-color: rgb(8, 122, 33);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+  width: 100px;
+}
+
+.fa-trash,
+.fa-check-circle {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.slide {
+  transform: translateX(10rem);
+  opacity: 0;
+}
+
+.fa-brands ,
+.fa-phone{
+  padding-right: 10px;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 50px;
+  width: 100%; /* Make it full width */
+  max-width: 300px; /* Optional: Set a maximum width */
+}
+
+.select:focus-within {
+  border: 0.2em solid #c509c1;
+  border-radius: 0.8em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: violet;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transform: all 0.3s ease;
+}
+
+select {
+  width: 10rem;
+  padding: 1rem;
+  color: violet;
+  height: 3.2rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+}
+
+.filter-todo {
+  width: 100%; /* Make select take full width of the parent */
+  padding: 1rem; /* Add some padding for aesthetics */
+  border: none; /* Remove default border */
+  border-radius: 50px; /* Match the parent border radius */
+  appearance: none; /* Remove default styling */
+  background: white; /* Background color */
+  font-size: 1rem; /* Adjust font size */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(67, 0, 70);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  .linktree {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  form input,
+  form button {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+  }
+
+  .todo {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  select {
+    width: 100%;
+    height: auto;
+  }
+
+  .filter-todo {
+    font-size: 14px;
+    padding: 8px;
+    max-width: 300px;
+  }
+
+  .select::after {
+    top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+
+  .linktree {
     width: 300px;
-    padding: 30px;
-    font-size: 20px;
-    text-align: left;
-    position: relative; /* Required for the pseudo-element to position correctly */
-    border-radius: 20px;
-    margin: auto;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.579);
-    z-index: 1; /* Ensures the content stays on top */
-}
-.test::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+    padding: 0.6rem;
+  }
+
+  form input,
+  form button {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+
+  .todo {
+    width: 90%;
+    font-size: 0.8rem;
+  }
+
+  select {
     width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1518076404115-d3cfab84eeb7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    z-index: -1; /* Ensure it is behind the content */
-    transition: filter 0.3s ease;
+    padding: 0.8rem;
+    height: 30px;
+  }
+
+  .select::after {
+    top: -8px;
+  }
+
+  .filter-todo {
+    font-size: 12px;
+    padding: 6px;
+    max-width: 250px;
+  }
 }
 
-.test:hover::before {
-    filter: blur(5px); /* Apply the blur effect on hover */
-}
-
-.test:hover{
-    color: white;
-}
-
-#heading{
-    color: rgb(167, 226, 72)
-}
-
-.test h3 {
-    font-family: 'Ubuntu Mono', monospace; /* Use Ubuntu Mono */
-    
-}
-.test h2 {
-    font-family: Arial, sans-serif; /* Arial */
-}
