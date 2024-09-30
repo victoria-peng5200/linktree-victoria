@@ -9,56 +9,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
-    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+<!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
 
 <body>
-    <div class="container">
+
+    <main class="container">
         <header>
-            <a href="https://victoria-portfolio-website.netlify.app/"><p>Click to see my portfolio</p></a>
+            <a href="https://victoria-portfolio-website.netlify.app/">
+                <p>Click to see my portfolio</p>
+            </a>
         </header>
-        <div class="visual">
-            <!-- Ripple -->
-            <svg viewBox="0 0 100 100">
-              <defs>
-                <circle id="circle-clip" cx="50%" cy="50%" r="25%" />
-                <clipPath id="avatar-clip">
-                  <use href="#circle-clip" />
-                </clipPath>
-              </defs>
-        
-              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
-                <animate attributeName="r" values="25%;50%" dur="4s" repeatCount="indefinite" />
-                <animate attributeName="fill-opacity" values="1;0" dur="4s" repeatCount="indefinite" />
-              </circle>
-        
-              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
-                <animate attributeName="r" values="25%;50%" dur="4s" begin="1s" repeatCount="indefinite" />
-                <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="1s" repeatCount="indefinite" />
-              </circle>
-        
-              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
-                <animate attributeName="r" values="25%;50%" dur="4s" begin="2s" repeatCount="indefinite" />
-                <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="2s" repeatCount="indefinite" />
-              </circle>
-        
-              <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
-                <animate attributeName="r" values="25%;50%" dur="4s" begin="3s" repeatCount="indefinite" />
-                <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="3s" repeatCount="indefinite" />
-              </circle>
-        
-              <image height="60%" width="60%" x="20%" y="25%" href="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" clip-path="url(#avatar-clip)" />  
-            </svg>
-          </div>
+        <section>
+            <div class="visual">
+                <!-- Ripple -->
+                <svg viewBox="0 0 100 100">
+                    <defs>
+                        <circle id="circle-clip" cx="50%" cy="50%" r="25%" />
+                        <clipPath id="avatar-clip">
+                            <use href="#circle-clip" />
+                        </clipPath>
+                    </defs>
 
-        <ul >
-            <li class="linktree"><i class="fa-brands fa-github"></i><a href="https://www.linkedin.com/in/victoria-peng-software-dev/">Linkedin</a></li>
-            <li class="linktree"><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/">Facebook</a></li>
-            <li class="linktree"><i class="fa-brands fa-twitter"></i><a href="https://x.com/">Twiter</a></li>
-            <li class="linktree"><i class="fa-brands fa-instagram"></i><a href="./table.html">Tables Demo</a></li>
-            <li class="linktree"><i class="fa-solid fa-phone"></i><a href="./contact.html">Contact Form</a></li>
-        </ul>
+                    <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                        <animate attributeName="r" values="25%;50%" dur="4s" repeatCount="indefinite" />
+                        <animate attributeName="fill-opacity" values="1;0" dur="4s" repeatCount="indefinite" />
+                    </circle>
 
-    </div>
+                    <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                        <animate attributeName="r" values="25%;50%" dur="4s" begin="1s" repeatCount="indefinite" />
+                        <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="1s"
+                            repeatCount="indefinite" />
+                    </circle>
+
+                    <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                        <animate attributeName="r" values="25%;50%" dur="4s" begin="2s" repeatCount="indefinite" />
+                        <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="2s"
+                            repeatCount="indefinite" />
+                    </circle>
+
+                    <circle cx="50%" cy="50%" r="25%" fill="white" fill-opacity="1">
+                        <animate attributeName="r" values="25%;50%" dur="4s" begin="3s" repeatCount="indefinite" />
+                        <animate attributeName="fill-opacity" values="1;0" dur="4s" begin="3s"
+                            repeatCount="indefinite" />
+                    </circle>
+
+                    <image height="60%" width="60%" x="20%" y="25%"
+                        href="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                        clip-path="url(#avatar-clip)" />
+                </svg>
+            </div>
+
+            <ul>
+                <li class="linktree"><i class="fa-brands fa-github"></i><a
+                        href="https://www.linkedin.com/in/victoria-peng-software-dev/">Linkedin</a></li>
+                <li class="linktree"><i class="fa-brands fa-facebook"></i><a
+                        href="https://www.facebook.com/">Facebook</a>
+                </li>
+                <li class="linktree"><i class="fa-brands fa-twitter"></i><a href="https://x.com/">Twiter</a></li>
+                <li class="linktree"><i class="fa-brands fa-instagram"></i><a href="./table.html">Tables Demo</a></li>
+                <li class="linktree"><i class="fa-solid fa-phone"></i><a href="./contact.html">Contact Form</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>
